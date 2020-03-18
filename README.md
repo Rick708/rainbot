@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+降水確率通知LineBot
 
-Things you may want to cover:
 
-* Ruby version
+## 説明
+当日の大阪府エリアの降水確率を取得し（6~12時、12~18時、18~24時）のどれか１つが50%以上であった場合にメッセージを送信しています。
+大阪府エリア意外にも全都道府県指定することもでき、通知のラインの50％も変動可能にしており
+余計な通知が来る事を避ける為50％以下は通知が来ない様にしております。「今日、明日、明後日」をコメントすると降水確率を教えてくれる
+機能もあります。
 
-* System dependencies
 
-* Configuration
+## 使用言語
+Line API
+rails
+heroku
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 提供
+天気情報はこちらのサイトからXmlファイルを取得させていただいております。
+https://www.drk7.jp/weather/
