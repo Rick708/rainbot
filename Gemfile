@@ -31,6 +31,8 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# 下記二つを追加しました
+
 # ①.env
 gem 'dotenv-rails'
 
