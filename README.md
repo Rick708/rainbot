@@ -10,11 +10,9 @@
 機能もあります。
 
 
-## 使用言語
+## 開発環境
 Line API
-
 rails
-
 heroku 
 
 ## 登録画像
@@ -25,4 +23,5 @@ heroku
 
 ## 提供
 天気情報はこちらのサイトからXmlファイルを取得させていただいております。
+
 https://www.drk7.jp/weather/
