@@ -21,7 +21,7 @@ heroku
 ![スクリーンショット 2020-03-18 14 40 27](https://user-images.githubusercontent.com/56381794/76929153-cb609680-6926-11ea-8ced-671592886547.png)
 
 ## 参照画像
-<img width="610" alt="スクリーンショット 2020-03-18 14 45 32" src="https://user-images.githubusercontent.com/56381794/76929302-22ff0200-6927-11ea-9544-a5b400b87c2d.png">
+<img width="300" height="300" alt="スクリーンショット 2020-03-18 14 45 32" src="https://user-images.githubusercontent.com/56381794/76929302-22ff0200-6927-11ea-9544-a5b400b87c2d.png">
 
 ## 提供
 天気情報はこちらのサイトからXmlファイルを取得させていただいております。
