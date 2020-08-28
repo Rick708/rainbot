@@ -22,8 +22,8 @@ class LinebotController < ApplicationController
           url  = "https://www.drk7.jp/weather/xml/27.xml"
           xml  = open( url ).read.toutf8
           doc = REXML::Document.new(xml)
-          xpath = 'weatherforecast/pref/area[1]/'
-          min_per = 5
+          xpath = 'weatherforecast/pref/area[4]/'
+          min_per = 5０
 　　　　　　　# ここで下限を決める
           case input
           when /.*(明日|あした).*/
@@ -43,10 +43,10 @@ class LinebotController < ApplicationController
             per18to24 = doc.elements[xpath + 'info[3]/rainfallchance/period[4]l'].text
             if per06to12.to_i >= min_per || per12to18.to_i >= min_per || per18to24.to_i >= min_per
               push =
-                "明後日の天気\n明後日は雨が降るかもしれまへんわ！\n当日の朝に雨が降りそうだったら教えますわ！"
+                "明後日の天気？\n明後日は雨が降るかもしれまへんわ！\n当日の朝に雨が降りそうだったら教えますわ！"
             else
               push =
-                "明後日の天気\n明後日は雨は降らない予定でっせ\n当日の朝の最新の天気予報で雨が降りそうやったわ教えますわ！"
+                "明後日の天気？\n明後日は雨は降らない予定でっせ\n当日の朝の最新の天気予報で雨が降りそうやったわ教えますわ！"
             end
           when /.*(かわいい|可愛い|カワイイ|きれい|綺麗|キレイ|素敵|ステキ|すてき|面白い|おもしろい|ありがと|すごい|スゴイ|スゴい|好き|頑張|がんば|ガンバ).*/
             push =
