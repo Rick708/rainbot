@@ -12,7 +12,7 @@ task :update_feed => :environment do
   url  = "https://www.drk7.jp/weather/xml/27.xml"
   xml  = open( url ).read.toutf8
   doc = REXML::Document.new(xml)
-  xpath = 'weatherforecast/pref/area[1]/info/rainfallchance/'
+  xpath = 'weatherforecast/pref/area[4]/info/rainfallchance/'
   per06to12 = doc.elements[xpath + 'period[2]'].text
   per12to18 = doc.elements[xpath + 'period[3]'].text
   per18to24 = doc.elements[xpath + 'period[4]'].text
@@ -28,7 +28,6 @@ task :update_feed => :environment do
       ["気をつけて行ってきてね(^^)",
        "良い一日を過ごしてね(^^)",
        "雨に負けずに今日も頑張ってね(^^)",
-       "今日も一日楽しんでいこうね(^^)",
        "楽しいことがありますように(^^)"].sample
     mid_per = 70
     if per06to12.to_i >= mid_per || per12to18.to_i >= mid_per || per18to24.to_i >= mid_per
